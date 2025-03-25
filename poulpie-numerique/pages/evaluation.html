@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluation - Poulpie Numérique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center py-3">
+                <div class="col-md-3 text-center text-md-start">
+                    <a href="../index.html">
+                        <img src="../images/logo-ifac.png" alt="Logo IFAC" class="logo">
+                    </a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h1 class="mb-0">Poulpie Numérique</h1>
+                    <p class="subtitle">Boîte à outils IA pour formateurs</p>
+                </div>
+                <div class="col-md-3 text-center text-md-end">
+                    <img src="../images/poulpie/poulpie-numerique.png" alt="Poulpie Numérique" class="poulpie-logo">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-8">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Rechercher un outil..." class="form-control">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-8 text-center">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="free">Gratuits</button>
+                        <button class="filter-btn" data-filter="freemium">Freemium</button>
+                        <button class="filter-btn" data-filter="paid">Payants</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bannière de catégorie -->
+    <section class="category-banner" style="background-color: rgba(0, 74, 128, 0.1);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex align-items-center">
+                        <div class="banner-icon me-4" style="background-color: #004a80;">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h2 class="mb-2">ÉVALUATION</h2>
+                            <p class="lead mb-0">Outils pour créer des quiz, des sondages et évaluer les acquis des stagiaires.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <img src="../images/poulpie/poulpie-evaluation.png" alt="Poulpie Évaluation" class="banner-poulpie-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation de catégorie -->
+    <nav class="category-nav py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="../index.html" class="nav-back">
+                            <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                        </a>
+                        <div class="nav-categories d-flex gap-3">
+                            <a href="contenu.html" class="nav-category">Contenu</a>
+                            <a href="visuel.html" class="nav-category">Visuel</a>
+                            <a href="presentations.html" class="nav-category">Présentations</a>
+                            <a href="video.html" class="nav-category">Vidéo</a>
+                            <a href="collaboration.html" class="nav-category">Collaboration</a>
+                            <a href="gestion.html" class="nav-category">Gestion</a>
+                            <a href="evaluation.html" class="nav-category active">Évaluation</a>
+                            <a href="jeux.html" class="nav-category">Jeux</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Liste des outils -->
+    <section class="tools-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Outil 1: Kahoot! -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="tool-card" data-type="freemium">
+                        <div class="tool-header">
+                            <img src="../images/logos/kahoot.png" alt="Kahoot!" class="tool-logo">
+                            <span class="tool-badge freemium">Freemium</span>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-name">Kahoot!</h3>
+                            <p class="tool-description">Une plateforme pour créer des quiz interactifs et ludiques.</p>
+                            <div class="tool-usage">
+                                <h4>Utilisation BAFA-BAFD :</h4>
+                                <p>Animer vos sessions avec des quiz pour évaluer les connaissances.</p>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://kahoot.com" target="_blank" class="tool-button">Accéder à l'outil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outil 2: Mentimeter -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="tool-card" data-type="freemium">
+                        <div class="tool-header">
+                            <img src="../images/logos/mentimeter.png" alt="Mentimeter" class="tool-logo">
+                            <span class="tool-badge freemium">Freemium</span>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-name">Mentimeter</h3>
+                            <p class="tool-description">Un outil de sondage interactif en temps réel.</p>
+                            <div class="tool-usage">
+                                <h4>Utilisation BAFA-BAFD :</h4>
+                                <p>Animer vos sessions avec des quiz, sondages, ou word clouds.</p>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://www.mentimeter.com" target="_blank" class="tool-button">Accéder à l'outil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outil 3: Quizizz -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="tool-card" data-type="freemium">
+                        <div class="tool-header">
+                            <img src="../images/logos/quizizz.png" alt="Quizizz" class="tool-logo">
+                            <span class="tool-badge freemium">Freemium</span>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-name">Quizizz</h3>
+                            <p class="tool-description">Quiz gamifiés avec analyse des résultats et suivi des progrès.</p>
+                            <div class="tool-usage">
+                                <h4>Utilisation BAFA-BAFD :</h4>
+                                <p>Créer des évaluations ludiques et suivre la progression des stagiaires.</p>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://quizizz.com" target="_blank" class="tool-button">Accéder à l'outil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outil 4: Wooclap -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="tool-card" data-type="freemium">
+                        <div class="tool-header">
+                            <img src="../images/logos/wooclap.png" alt="Wooclap" class="tool-logo">
+                            <span class="tool-badge freemium">Freemium</span>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-name">Wooclap</h3>
+                            <p class="tool-description">Interactions et évaluations en direct avec multiples formats de questions.</p>
+                            <div class="tool-usage">
+                                <h4>Utilisation BAFA-BAFD :</h4>
+                                <p>Rendre vos formations interactives et évaluer la compréhension en temps réel.</p>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://www.wooclap.com" target="_blank" class="tool-button">Accéder à l'outil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outil 5: Plickers -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="tool-card" data-type="free">
+                        <div class="tool-header">
+                            <img src="../images/logos/plickers.png" alt="Plickers" class="tool-logo">
+                            <span class="tool-badge free">Gratuit</span>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-name">Plickers</h3>
+                            <p class="tool-description">Évaluation sans appareils pour les participants, seul le formateur a besoin d'un smartphone.</p>
+                            <div class="tool-usage">
+                                <h4>Utilisation BAFA-BAFD :</h4>
+                                <p>Réaliser des sondages et quiz sans que les stagiaires aient besoin d'appareils électroniques.</p>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://plickers.com" target="_blank" class="tool-button">Accéder à l'outil</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outil 6: Google Forms + Gemini -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="tool-card" data-type="free">
+                        <div class="tool-header">
+                            <img src="../images/logos/googleforms.png" alt="Google Forms" class="tool-logo">
+                            <span class="tool-badge free">Gratuit</span>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-name">Google Forms + Gemini</h3>
+                            <p class="tool-description">Création et analyse de formulaires avec l'aide de l'IA pour interpréter les résultats.</p>
+                            <div class="tool-usage">
+                                <h4>Utilisation BAFA-BAFD :</h4>
+                                <p>Créer des questionnaires d'évaluation et analyser les réponses avec l'aide de l'IA.</p>
+                            </div>
+                        </div>
+                        <div class="tool-footer">
+                            <a href="https://forms.google.com" target="_blank" class="tool-button">Accéder à l'outil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="site-footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <img src="../images/logo-ifac.png" alt="Logo IFAC" class="footer-logo-img">
+                    <p class="mt-2 mb-0 text-white">Développé pour les formateurs IFAC</p>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <div class="footer-links">
+                        <a href="https://www.ifac.asso.fr" target="_blank" class="text-white me-3">Site principal IFAC</a>
+                        <a href="mailto:contact@ifac.asso.fr" class="text-white">Suggérer un outil</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <img src="../images/poulpie/poulpie-footer.png" alt="Poulpie" class="footer-poulpie-img">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

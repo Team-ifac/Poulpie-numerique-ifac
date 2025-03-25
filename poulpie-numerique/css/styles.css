@@ -1,0 +1,405 @@
+/* Styles généraux */
+:root {
+    --primary-color: #0069b4;
+    --secondary-color: #a6ce39;
+    --tertiary-color: #f26f21;
+    --quaternary-color: #0099cc;
+    --quinary-color: #ffed00;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+    --border-radius: 10px;
+    --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* En-tête */
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+.poulpie-logo {
+    max-height: 80px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.search-bar button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.search-bar button:hover {
+    background-color: #005091;
+}
+
+.search-results {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: none;
+}
+
+/* Boutons de filtre */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Bannière de catégorie */
+.category-banner {
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+.banner-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.banner-poulpie-img {
+    max-height: 120px;
+}
+
+/* Navigation de catégorie */
+.category-nav {
+    background-color: var(--light-bg);
+    margin-bottom: 20px;
+}
+
+.nav-back {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-back:hover {
+    color: #005091;
+}
+
+.nav-categories {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 5px;
+}
+
+.nav-category {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.nav-category:hover, .nav-category.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Cartes d'outils */
+.tools-section {
+    padding: 20px 0;
+}
+
+.tool-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.tool-header {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-bg);
+    height: 120px;
+}
+
+.tool-logo {
+    max-height: 80px;
+    max-width: 80%;
+    object-fit: contain;
+}
+
+.tool-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.tool-badge.free {
+    background-color: var(--secondary-color);
+}
+
+.tool-badge.freemium {
+    background-color: var(--tertiary-color);
+}
+
+.tool-badge.paid {
+    background-color: var(--primary-color);
+}
+
+.tool-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.tool-name {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.tool-description {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.tool-usage h4 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.tool-footer {
+    padding: 15px 20px;
+    background-color: var(--light-bg);
+}
+
+.tool-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.tool-button:hover {
+    background-color: #005091;
+    transform: translateY(-2px);
+}
+
+/* Pied de page */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 30px;
+}
+
+.footer-logo-img {
+    max-height: 40px;
+}
+
+.footer-poulpie-img {
+    max-height: 60px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+/* Surlignage des résultats de recherche */
+.highlight {
+    background-color: var(--quinary-color);
+    font-weight: bold;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .nav-categories {
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+    
+    .tool-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .site-header .row > div {
+        margin-bottom: 15px;
+    }
+    
+    .banner-poulpie-img {
+        max-height: 100px;
+        margin-top: 20px;
+    }
+    
+    .category-banner {
+        text-align: center;
+    }
+    
+    .category-banner .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .banner-icon {
+        margin-bottom: 15px;
+        margin-right: 0 !important;
+    }
+    
+    .nav-categories {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+    
+    .nav-category {
+        white-space: nowrap;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .logo, .poulpie-logo {
+        max-height: 50px;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+        margin-bottom: 5px;
+    }
+    
+    .tool-header {
+        height: 100px;
+    }
+    
+    .tool-logo {
+        max-height: 60px;
+    }
+    
+    .tool-name {
+        font-size: 1.1rem;
+    }
+    
+    .footer-logo-img, .footer-poulpie-img {
+        max-height: 40px;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-links a {
+        margin: 0 !important;
+    }
+}
