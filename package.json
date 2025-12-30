@@ -1,0 +1,14 @@
+{
+  "name": "poulpie-numerique-ifac",
+  "version": "1.0.0",
+  "description": "Ressourcerie IFAC – site complet sans dépendances externes",
+  "main": "app.py",
+  "type": "commonjs",
+  "scripts": {
+    "start": "python app.py",
+    "test": "echo 'No automated tests configured'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
