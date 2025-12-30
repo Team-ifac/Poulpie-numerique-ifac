@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "python app.py",
-    "test": "echo 'No automated tests configured'"
+    "test": "echo 'No automated tests configured'",
+    "zip": "bash scripts/package.sh"
   },
   "keywords": [],
   "author": "",

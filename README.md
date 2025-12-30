@@ -36,3 +36,7 @@ Appuyez sur `Ctrl + C` dans le terminal ayant lancé `python app.py`.
 ## Dépannage rapide
 - Si le port est occupé, choisissez-en un autre : `PORT=8001 python app.py`.
 - Pour repartir de zéro, supprimez `data.sqlite` et relancez `python app.py` (les données de démo sont regénérées).
+
+## Partager ou télécharger facilement
+- **Créer un ZIP prêt à envoyer** : `npm run zip` (ou `bash scripts/package.sh`). L’archive `ressourcerie-ifac.zip` contient le code, les assets et les exemples prêts à l’emploi (sans la base ni les uploads temporaires).
+- **Partager un lien temporaire** : lancez le serveur (`python app.py`) puis utilisez votre outil de tunnel favori (ex. `ssh -R 0.0.0.0:8080:localhost:5000 user@serveur_public`) ou un service type `cloudflared`/`ngrok` pour exposer `http://localhost:5000`.
