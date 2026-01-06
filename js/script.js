@@ -1,8 +1,11 @@
 // Fonctionnalités de recherche et de filtrage
 document.addEventListener('DOMContentLoaded', function() {
+    // Si aucune carte d'outil n'est présente (nouvelle page d'accueil Ressourcerie), ne pas initialiser la logique ci-dessous.
+    const toolCards = document.querySelectorAll('.tool-card');
+    if (!toolCards.length) return;
+
     // Gestion des filtres
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const toolCards = document.querySelectorAll('.tool-card');
     
     // Fonction pour filtrer les outils
     function filterTools(filter) {

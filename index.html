@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poulpie Numérique - Boîte à outils IA pour formateurs</title>
+    <title>Ressourcerie IFAC - 4 profils, 111 ressources</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -13,175 +13,109 @@
     <!-- En-tête -->
     <header class="site-header">
         <div class="container">
-            <div class="row align-items-center py-3">
-                <div class="col-md-3 text-center text-md-start">
-                    <a href="index.html">
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3 py-3">
+                <div class="d-flex align-items-center gap-3">
+                    <a href="index.html" class="d-inline-flex align-items-center gap-2 text-decoration-none">
                         <img src="images/logo-ifac.png" alt="Logo IFAC" class="logo">
+                        <div>
+                            <h1 class="mb-0">Ressourcerie IFAC</h1>
+                            <p class="subtitle mb-0">111 ressources pédagogiques BAFA-BAFD</p>
+                        </div>
                     </a>
                 </div>
-                <div class="col-md-6 text-center">
-                    <h1 class="mb-0">Poulpie Numérique</h1>
-                    <p class="subtitle">Boîte à outils IA pour formateurs</p>
+                <div class="flex-grow-1 w-100 w-lg-50">
+                    <form class="search-bar" id="globalSearchForm" role="search">
+                        <input id="globalSearchInput" type="search" placeholder="Rechercher par titre ou description..." aria-label="Rechercher une ressource" class="form-control">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i><span class="ms-2 d-none d-sm-inline">Rechercher</span></button>
+                    </form>
+                    <div class="search-results" id="globalSearchResults" aria-live="polite"></div>
                 </div>
-                <div class="col-md-3 text-center text-md-end">
-                    <img src="images/poulpie/poulpie-numerique.png" alt="Poulpie Numérique" class="poulpie-logo">
-                </div>
-            </div>
-            <div class="row justify-content-center mt-3">
-                <div class="col-md-8">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Rechercher un outil..." class="form-control">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-3">
-                <div class="col-md-8 text-center">
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">Tous</button>
-                        <button class="filter-btn" data-filter="free">Gratuits</button>
-                        <button class="filter-btn" data-filter="freemium">Freemium</button>
-                        <button class="filter-btn" data-filter="paid">Payants</button>
-                    </div>
+                <div class="text-center text-lg-end">
+                    <img src="images/poulpie/poulpie-numerique.png" alt="Mascotte Poulpie" class="poulpie-logo">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Bannière d'accueil -->
-    <section class="welcome-banner">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h2 class="welcome-title">Bienvenue sur Poulpie Numérique</h2>
-                    <p class="welcome-text">Découvrez une sélection d'outils d'intelligence artificielle pour enrichir vos formations BAFA-BAFD. Explorez les différentes catégories et trouvez les ressources adaptées à vos besoins pédagogiques.</p>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="images/poulpie/poulpie-welcome.png" alt="Poulpie Welcome" class="welcome-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Catégories -->
-    <section class="categories-section py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-4">Explorez nos catégories d'outils</h2>
-            <div class="row">
-                <!-- Catégorie 1: Contenu -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/contenu.html" class="category-card" style="background-color: rgba(0, 105, 180, 0.1);">
-                        <div class="category-icon" style="background-color: #0069b4;">
-                            <i class="fas fa-pen-fancy"></i>
+    <main>
+        <!-- Bannière d'accueil -->
+        <section class="welcome-banner">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <p class="eyebrow mb-2 text-uppercase fw-semibold">Plateforme dédiée aux équipes IFAC</p>
+                        <h2 class="welcome-title">Partagez, cherchez et animez vos formations plus vite</h2>
+                        <p class="welcome-text mb-4">Accédez aux ressources classées par profil et par catégorie. Les stagiaires découvrent le BAFA/BAFD, les animateur·rices trouvent leurs 77 fiches pratiques, les directeur·rices gèrent leurs équipes, et les formateur·rices approfondissent leurs parcours.</p>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <div class="pill">🔥 6 ressources les plus consultées mises en avant</div>
+                            <div class="pill">🆕 6 ressources récentes à portée de clic</div>
+                            <div class="pill">🔒 Profils connectés pour directeur·rices & formateur·rices</div>
                         </div>
-                        <h3 class="category-title">Création de contenu</h3>
-                        <p class="category-description">Outils pour générer des idées et créer des supports pédagogiques</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-contenu.png" alt="Poulpie Contenu" class="category-img">
+                        <div class="d-flex flex-wrap gap-3">
+                            <a class="btn btn-primary" href="#profiles">Choisir un profil</a>
+                            <a class="btn btn-outline-primary" href="#recent-resources">Voir les nouveautés</a>
                         </div>
-                    </a>
-                </div>
-
-                <!-- Catégorie 2: Visuel -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/visuel.html" class="category-card" style="background-color: rgba(166, 206, 57, 0.1);">
-                        <div class="category-icon" style="background-color: #a6ce39;">
-                            <i class="fas fa-image"></i>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <img src="images/poulpie/poulpie-welcome.png" alt="Poulpie présentant la Ressourcerie" class="welcome-img">
+                        <div class="stats-grid mt-4">
+                            <div class="stat-card">
+                                <p class="stat-label">Années d'expérience</p>
+                                <p class="stat-value">50+</p>
+                            </div>
+                            <div class="stat-card">
+                                <p class="stat-label">Professionnels formés</p>
+                                <p class="stat-value">20k+</p>
+                            </div>
+                            <div class="stat-card">
+                                <p class="stat-label">Ressources publiées</p>
+                                <p class="stat-value">111</p>
+                            </div>
                         </div>
-                        <h3 class="category-title">Création visuelle</h3>
-                        <p class="category-description">Outils pour créer des images et des infographies</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-visuel.png" alt="Poulpie Visuel" class="category-img">
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Catégorie 3: Présentations -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/presentations.html" class="category-card" style="background-color: rgba(242, 111, 33, 0.1);">
-                        <div class="category-icon" style="background-color: #f26f21;">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <h3 class="category-title">Présentations</h3>
-                        <p class="category-description">Outils pour créer des présentations dynamiques</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-presentations.png" alt="Poulpie Présentations" class="category-img">
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Catégorie 4: Vidéo -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/video.html" class="category-card" style="background-color: rgba(149, 193, 31, 0.1);">
-                        <div class="category-icon" style="background-color: #95c11f;">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3 class="category-title">Création vidéo</h3>
-                        <p class="category-description">Outils pour créer et éditer des vidéos pédagogiques</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-video.png" alt="Poulpie Vidéo" class="category-img">
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Catégorie 5: Collaboration -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/collaboration.html" class="category-card" style="background-color: rgba(102, 36, 131, 0.1);">
-                        <div class="category-icon" style="background-color: #662483;">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="category-title">Collaboration</h3>
-                        <p class="category-description">Outils pour faciliter le travail collaboratif</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-collaboration.png" alt="Poulpie Collaboration" class="category-img">
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Catégorie 6: Gestion -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/gestion.html" class="category-card" style="background-color: rgba(0, 159, 227, 0.1);">
-                        <div class="category-icon" style="background-color: #009fe3;">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <h3 class="category-title">Gestion de formation</h3>
-                        <p class="category-description">Outils pour organiser et planifier vos formations</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-gestion.png" alt="Poulpie Gestion" class="category-img">
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Catégorie 7: Évaluation -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/evaluation.html" class="category-card" style="background-color: rgba(0, 74, 128, 0.1);">
-                        <div class="category-icon" style="background-color: #004a80;">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3 class="category-title">Évaluation</h3>
-                        <p class="category-description">Outils pour créer des quiz et évaluer les acquis</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-evaluation.png" alt="Poulpie Évaluation" class="category-img">
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Catégorie 8: Jeux -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="pages/jeux.html" class="category-card" style="background-color: rgba(255, 237, 0, 0.1);">
-                        <div class="category-icon" style="background-color: #ffed00;">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <h3 class="category-title">Jeux pédagogiques</h3>
-                        <p class="category-description">Outils pour créer des activités ludiques</p>
-                        <div class="category-img-container">
-                            <img src="images/poulpie/poulpie-jeux.png" alt="Poulpie Jeux" class="category-img">
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Profils -->
+        <section class="profiles-section py-5" id="profiles">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-3">
+                    <h2 class="section-title mb-0">4 profils utilisateurs</h2>
+                    <p class="mb-0 text-muted">Sélectionnez un profil pour afficher les catégories et ressources associées.</p>
+                </div>
+                <div class="row g-4" id="profileCards"></div>
+            </div>
+        </section>
+
+        <!-- Ressources populaires -->
+        <section class="resources-section py-5 bg-light" id="popular-resources">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-3">
+                    <div>
+                        <p class="eyebrow mb-2">Découvrir rapidement</p>
+                        <h2 class="section-title mb-0">Ressources populaires</h2>
+                    </div>
+                    <span class="badge rounded-pill text-bg-primary">Top 6 par nombre de vues</span>
+                </div>
+                <div class="row g-4" id="popularResourcesGrid"></div>
+            </div>
+        </section>
+
+        <!-- Ressources récentes -->
+        <section class="resources-section py-5" id="recent-resources">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-3">
+                    <div>
+                        <p class="eyebrow mb-2">Ajouts récents</p>
+                        <h2 class="section-title mb-0">Ressources récentes</h2>
+                    </div>
+                    <span class="badge rounded-pill text-bg-success">6 dernières publications</span>
+                </div>
+                <div class="row g-4" id="recentResourcesGrid"></div>
+            </div>
+        </section>
+    </main>
 
     <!-- Pied de page -->
     <footer class="site-footer py-4">
@@ -189,12 +123,13 @@
             <div class="row align-items-center">
                 <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <img src="images/logo-ifac.png" alt="Logo IFAC" class="footer-logo-img">
-                    <p class="mt-2 mb-0 text-white">Développé pour les formateurs IFAC</p>
+                    <p class="mt-2 mb-0 text-white">Ressourcerie IFAC · BAFA-BAFD</p>
                 </div>
                 <div class="col-md-4 text-center mb-3 mb-md-0">
                     <div class="footer-links">
-                        <a href="https://www.ifac.asso.fr" target="_blank" class="text-white me-3">Site principal IFAC</a>
-                        <a href="mailto:contact@ifac.asso.fr" class="text-white">Suggérer un outil</a>
+                        <a href="#profiles" class="text-white me-3">Profils</a>
+                        <a href="#popular-resources" class="text-white me-3">Populaires</a>
+                        <a href="#recent-resources" class="text-white">Nouveautés</a>
                     </div>
                 </div>
                 <div class="col-md-4 text-center text-md-end">
@@ -206,5 +141,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/ressourcerie.js"></script>
 </body>
 </html>
